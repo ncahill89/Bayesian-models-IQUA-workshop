@@ -10,12 +10,13 @@ design:
     gradient_end: '#2b94c3'
     text_color_light: true
 cta:
-  url: docs/
-  label: Get Started
-  icon_pack: fas
-cta_alt:
   url: https://github.com/ncahill89/EIVModels
   label: Model Code
+  icon_pack: fas
+  icon: download
+cta_alt:
+  url: docs/
+  label: Get Started
   icon_pack: fas
 
   
