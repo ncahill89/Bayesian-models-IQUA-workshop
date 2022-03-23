@@ -1,9 +1,15 @@
 ---
-title: Docs
+title: Workshop Materials
 type: book # Do not modify.
 toc: false
 ---
 
-Welcome to the _Project Docs_ template!
+Welcome. Here are some things you will need in order to complete the workshop. 
 
-{{< cta cta_text="👉 Get Started with Chapter 1" cta_link="chapter1" >}}
+1. Download and install Rstudio
+2. Download and install JAGS
+3. Make sure the following packages are installed on Rstudio
+  i.  tidyverse
+  ii. R2jags
+
+{{< cta cta_text="👉 Let's get started" cta_link="chapter1" >}}
