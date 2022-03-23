@@ -13,7 +13,7 @@ cta:
   url: docs/
   label: Get Started
   icon_pack: fas
-cta:
+cta_alt:
   url: https://github.com/ncahill89/EIVModels
   label: Model Code
   icon_pack: fas
