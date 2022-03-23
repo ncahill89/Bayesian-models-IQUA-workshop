@@ -49,3 +49,59 @@ Combining the priors and the data model gives us the posterior. The posterior te
 
 <span style="color: #CC79A7;"> __Priors = Constraints__</span>
 
+## A Modelling Option: Simple Linear Regression
+\footnotesize
+
+
+<!-- <font size="3"> -->
+
+<span style="color: #E69F00;"> __Expected Y = f(parameters,x), where f = linear__</span>
+
+
+  $$\text{Expected} Y = \alpha + \beta Age$$
+
+<span style="color: #009E73;"> __Y = Expected Y + error, where error $\sim$ Normal__</span>
+
+
+$$Y = \alpha + \beta Age + error$$
+
+$$error \sim Normal(0, \sigma_{Y})$$
+
+
+<span style="color: #CC79A7;"> __Priors = Constraints__</span>
+
+  - We might assume we don't know much about $\alpha$ and $\beta$
+   
+  - $\sigma_{Y}$ must be positive
+
+<!-- </font> -->
+
+
+## What happens when x has associated errors? 
+\footnotesize
+Instead of 
+$$\text{Expected } Y  = \alpha + \beta Age$$
+What we want is 
+$$\text{Expected } Y = \alpha + \beta Age^{TRUE}$$
+
+But we don't know $Age^{TRUE}$ `r emo::ji("sad")`
+
+
+## We can use an Errors-in-Variables (EIV) approach `r emo::ji("happy")`
+
+We can again assume that
+
+ <span style="color: #009E73;"> __X = Expected X + error, where error $\sim$ Normal__</span>
+
+$$Age = Age^{TRUE} + error$$
+
+$$error \sim Normal(0, \sigma_{Age})$$
+
+<span style="color: #CC79A7;"> __Priors = Constraints__</span>
+
+We need a prior for $Age^{TRUE}$ with a plausible range.
+  
+This is called an __Errors-in-Variables__ model. 
+
+
+
