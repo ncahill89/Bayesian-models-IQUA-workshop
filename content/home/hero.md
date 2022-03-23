@@ -23,5 +23,3 @@ cta_alt:
 ---
 
 Topics include: Statistical Models for time-dependent, error-prone data
-
-<a class="github-button" href="https://github.com/ncahill89/EIVModels" data-icon="octicon-star" data-size="large" data-show-count="true" aria-label="Model Code">Model Code</a><script async defer src="https://buttons.github.io/buttons.js"></script>
