@@ -12,45 +12,40 @@ date: '2018-09-09T00:00:00Z'
 type: book # Do not modify.
 ---
 
-## Flexibility
+## Introduction
 
-Document everything!
+  - In general, when we model time dependent data we don't usually have to worry about having errors in the time variable
+  
+  - But that is not the case when the time dependent data is a reconstruction (e.g., a sea level reconstruction)
 
-This feature can be used for publishing content such as:
+  - In my research, usually on the analysis of sea-level reconstructions, I use the output from age-depth models (e.g., Bchron, Bacon) which provide age estimates with uncertainty for core sediment samples.
+  
+  - So, here I will explore the impact of this age uncertainty in the statistical modelling of time dependent data. 
+  
+  
 
-- **Online courses**
-- **Project or software documentation**
-- **Tutorials**
-- **Notes**
+## Model Specification 
 
-The `courses` folder may be renamed. For example, we can rename it to `docs` for software/project documentation or `tutorials` for creating an online course.
+I use a Bayesian approach to statistical modelling and when it comes to the specifying the Bayesian model recipe, the ingredients are
 
-## Delete courses
+1. The process model
+2. The data model (likelihood)
+3. The priors
 
-**To remove these pages, delete the `courses` folder and see below to delete the associated menu link.**
+Combining the priors and the data model gives us the posterior. The posterior tells us everything we need to know about what we are trying to estimate. 
 
-## Update site menu
 
-After renaming or deleting the `courses` folder, you may wish to update any `[[main]]` menu links to it by editing your menu configuration at `config/_default/menus.toml`.
+## Model Specification Cont. 
+  
+  - The process model relates to the expectation of what’s underlying the observed data (i.e., "the truth"). The process model will be governed by a set of explanatory variables and parameters that need to be estimated.
+  
+ <span style="color: #E69F00;"> __Expected Y = f(parameters,x)__</span>
 
-For example, if you delete this folder, you can remove the following from your menu configuration:
+  - The data model contains assumptions about how the data are generated and incorporates data uncertainty. The data model links the observed data to the underlying process.
+  
+  <span style="color: #009E73;"> __Uncertain Data (Y) = Expected Y + error__</span>
+  
+  - The priors contain assumptions about the parameters we are estimating. Priors can be used to impose constraints on model parameters based on apriori information.
 
-```toml
-[[main]]
-  name = "Courses"
-  url = "courses/"
-  weight = 50
-```
+<span style="color: #CC79A7;"> __Priors = Constraints__</span>
 
-Or, if you are creating a software documentation site, you can rename the `courses` folder to `docs` and update the associated _Courses_ menu configuration to:
-
-```toml
-[[main]]
-  name = "Docs"
-  url = "docs/"
-  weight = 50
-```
-
-## Update the docs menu
-
-If you use the _docs_ layout, note that the name of the menu in the front matter should be in the form `[menu.X]` where `X` is the folder name. Hence, if you rename the `courses/example/` folder, you should also rename the menu definitions in the front matter of files within `courses/example/` from `[menu.example]` to `[menu.<NewFolderName>]`.
