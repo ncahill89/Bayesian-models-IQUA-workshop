@@ -13,11 +13,7 @@ cta:
   url: docs/
   label: Get Started
   icon_pack: fas
-cta_note:
-  label: >-
-    <span class="js-github-release" data-repo="wowchemy/wowchemy-hugo-themes">
-      Project version will appear here<!-- Automatically filled based on data-repo value -->
-    </span>
+  
 ---
 
 Topics include: Statistical Models for time-dependent, error-prone data
